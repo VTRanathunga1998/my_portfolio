@@ -1,10 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const formRef = useRef();
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
+  // const [error, setError] = useState(false);
+  // const [success, setSuccess] = useState(false);
 
   const contact_info = [
     { logo: "mail", text: "virajtharuka.fb@gmail.com" },
@@ -27,11 +27,12 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          setSuccess(true);
+          // setSuccess(true);
           formRef.current.reset();
         },
         (error) => {
-          setError(true);
+          // setError(true);
+          console.log(error);
         }
       );
   };
