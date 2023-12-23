@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Contact = () => {
   const formRef = useRef();
-  // const [error, setError] = useState(false);
-  // const [success, setSuccess] = useState(false);
 
   const contact_info = [
     { logo: "mail", text: "virajtharuka.fb@gmail.com" },
@@ -27,12 +28,31 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          // setSuccess(true);
+          toast.success("Message sent successfully!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+
           formRef.current.reset();
         },
         (error) => {
-          // setError(true);
-          console.log(error);
+          toast.error("Message not sent", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+          formRef.current.reset();
         }
       );
   };
@@ -54,16 +74,23 @@ const Contact = () => {
             onSubmit={sendEmail}
             className="flex flex-col flex-1 gap-5"
           >
-            <input type="text" placeholder="Your Name" name="user_name" />
+            <input
+              type="text"
+              placeholder="Your Name"
+              name="user_name"
+              required
+            />
             <input
               type="Email"
               placeholder="Your Email Address"
               name="user_email"
+              required
             />
             <textarea
               placeholder="Your Message"
               rows={10}
               name="message"
+              required
             ></textarea>
             <button className="btn-primary w-fit">Send Message</button>
           </form>
@@ -85,6 +112,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 };

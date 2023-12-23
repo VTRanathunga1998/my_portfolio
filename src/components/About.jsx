@@ -1,5 +1,6 @@
 import React from "react";
 import aboutImg from "../assets/images/show.png";
+
 const About = () => {
   const info = [
     { text: "Years experience", count: "02" },
@@ -38,7 +39,7 @@ const About = () => {
               </div>
               <br />
               <br />
-              <a href="./src/assets/resume/Ranathunga_VT.pdf" download>
+              <a href="resume/Ranathunga_VT.pdf" download="Resume">
                 <button className="btn-primary">Download CV</button>
               </a>
             </div>
@@ -47,7 +48,7 @@ const About = () => {
             <div className="lg:w-96 h-full relative sm:w-10/12 w-11/12 max-w-sm aboutImg ">
               <img
                 src={aboutImg}
-                alt=""
+                alt="About"
                 className="w-full object-cover bg-cyan-600 rounded-xl"
               />
             </div>
