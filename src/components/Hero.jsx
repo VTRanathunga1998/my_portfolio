@@ -55,7 +55,7 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 5 }}
+        transition={{ duration: 2.5 }}
         className="flex-1"
       >
         <div className="md:text-left text-center">

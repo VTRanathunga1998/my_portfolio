@@ -2,22 +2,26 @@ import React, { useEffect, useState } from "react";
 
 //import framer motion
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [open, setOpen] = useState(false);
+
   const menuLinks = [
-    { name: "HOME", link: "#home" },
-    { name: "ABOUT", link: "#about" },
-    { name: "SKILLS", link: "#skills" },
-    { name: "PROJECTS", link: "#projects" },
-    { name: "CONTACT", link: "#contact" },
+    { name: "HOME", link: "home", offset: -30 },
+    { name: "ABOUT", link: "about", offset: -30 },
+    { name: "SKILLS", link: "skills", offset: -30 },
+    { name: "PROJECTS", link: "projects", offset: -30 },
+    { name: "CONTACT", link: "contact", offset: -30 },
   ];
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.scrollY > 0 ? setSticky(true) : setSticky(false);
     });
   }, []);
+
   return (
     <nav
       className={`fixed w-full left-0 top-0 z-[999] ${
@@ -37,8 +41,17 @@ const Navbar = () => {
         >
           <ul className="flex items-center gap-1 py-2 text-lg">
             {menuLinks?.map((menu, i) => (
-              <li key={i} className="px-6 hover:text-cyan-600">
-                <a href={menu?.link}>{menu?.name}</a>
+              <li key={i} className={`px-6 hover:text-cyan-600`}>
+                <Link
+                  to={menu?.link}
+                  spy={true}
+                  smooth={true}
+                  offset={menu?.offset}
+                  duration={500}
+                  href={menu?.link}
+                >
+                  {menu?.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -62,11 +75,20 @@ const Navbar = () => {
               <motion.li
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => setOpen(false)}
                 key={i}
                 className="px-6 hover:text-cyan-600"
               >
-                <a href={menu?.link}>{menu?.name}</a>
+                <Link
+                  to={menu?.link}
+                  spy={true}
+                  smooth={true}
+                  offset={menu?.offset}
+                  duration={1000}
+                  href={menu?.link}
+                  onClick={() => setOpen(false)}
+                >
+                  {menu?.name}
+                </Link>
               </motion.li>
             ))}
           </ul>
