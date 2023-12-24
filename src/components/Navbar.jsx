@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 
+//import framer motion
+import { motion } from "framer-motion";
+
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [open, setOpen] = useState(false);
@@ -56,17 +59,18 @@ const Navbar = () => {
         >
           <ul className="flex flex-col justify-center h-full gap-10 py-2 text-lg">
             {menuLinks?.map((menu, i) => (
-              <li
+              <motion.li
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => setOpen(false)}
                 key={i}
                 className="px-6 hover:text-cyan-600"
               >
                 <a href={menu?.link}>{menu?.name}</a>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </div>
-        
       </div>
     </nav>
   );
