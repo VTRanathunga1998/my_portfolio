@@ -8,7 +8,7 @@ const Contact = () => {
   const formRef = useRef();
 
   const contact_info = [
-    { logo: "mail", text: "virajtharuka.fb@gmail.com" },
+    { logo: "mail", text: "ranathungavt@gmail.com" },
     { logo: "logo-whatsapp", text: "+94 71 528 5066" },
     {
       logo: "location",

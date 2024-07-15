@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 
 //import framer motion
@@ -30,9 +31,14 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between">
         <div className="mx-7">
-          <h4 className="text-4xl uppercase font-bold">
+          <motion.h4
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5 }}
+            className="text-4xl uppercase font-bold"
+          >
             V<span className="text-cyan-600">ira</span>J
-          </h4>
+          </motion.h4>
         </div>
         <div
           className={` ${
@@ -41,7 +47,13 @@ const Navbar = () => {
         >
           <ul className="flex items-center gap-1 py-2 text-lg">
             {menuLinks?.map((menu, i) => (
-              <li key={i} className={`px-6 hover:text-cyan-600`}>
+              <motion.li
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.5 }}
+                key={i}
+                className={`px-6 hover:text-cyan-600`}
+              >
                 <Link
                   to={menu?.link}
                   spy={true}
@@ -52,7 +64,7 @@ const Navbar = () => {
                 >
                   {menu?.name}
                 </Link>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </div>

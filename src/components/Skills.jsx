@@ -1,5 +1,7 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+
 const Skills = () => {
   const skills = [
     {
@@ -14,13 +16,23 @@ const Skills = () => {
     },
     {
       logo: "logo-nodejs",
-      level: "Beginner",
-      count: 40,
+      level: "Intermediate",
+      count: 70,
     },
     {
       logo: "logo-react",
       level: "Intermediate",
       count: 80,
+    },
+    {
+      logo: "logo-laravel",
+      level: "Beginner",
+      count: 20,
+    },
+    {
+      logo: "logo-python",
+      level: "Beginner",
+      count: 25,
     },
   ];
   return (
@@ -30,13 +42,17 @@ const Skills = () => {
           My <span className="text-cyan-600">Skills</span>
         </h3>
         <p className="text-gray-400 mt-3 text-lg">My knowledge</p>
+
         <div className="flex items-center justify-center mt-12 gap-10 flex-wrap">
           {skills?.map((skill, i) => (
-            <div
+            <motion.div
+              initial={{ scale: 0.5 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 1 }}
               key={i}
               className="border-2 group border-cyan-600 relative min-w-[10rem] max-w-[16rem] bg-gray-900 p-10 rounded-xl"
             >
-              <div
+              <motion.div
                 style={{
                   background: `conic-gradient(rgb(8,145,170) ${skill.count}%,#ddd ${skill.count}%)`,
                 }}
@@ -45,9 +61,9 @@ const Skills = () => {
                 <div className="text-6xl w-28 h-28 bg-gray-900 rounded-full flex items-center justify-center group-hover:text-cyan-600">
                   <ion-icon name={skill.logo}></ion-icon>
                 </div>
-              </div>
+              </motion.div>
               <p className="text-xl mt-3">{skill.level}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
