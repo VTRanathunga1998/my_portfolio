@@ -36,7 +36,7 @@ const Project = () => {
       img: project3,
       name: "Sports Club Control System",
       github_link: "",
-      live_link: "#",
+      live_link: "https://club.otomatiki.xyz/",
     },
   ];
   return (
