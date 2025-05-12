@@ -48,7 +48,7 @@ const Hero = () => {
       >
         <img
           src={hero}
-          alt="Viraj Tharuka"
+          alt="Viraj Ranathunga"
           className="md:w-11/12 h-full object-cover"
         />
       </motion.div>
@@ -64,7 +64,7 @@ const Hero = () => {
               Hello!
               <br />
             </span>
-            My name is <span>Viraj Tharuka</span>
+            My name is <span>Viraj Ranathunga</span>
           </h1>
 
           <TypeAnimation
