@@ -18,13 +18,16 @@ const About = () => {
           <div className="p-2">
             <div className="text-gray-300 my-3">
               <p className="text-justify leading-7 w-11/12 mx-auto">
-                Hello! I'm actively pursuing a degree in Computing and
-                Information Systems at Sabaragamuwa University of Sri Lanka.
-                Proficient in HTML, CSS, JavaScript, and PHP, I'm also diving
-                into Java and Python. My passion lies in web design, and I've
-                collaborated on various academic projects, honing my skills in
-                problem-solving and teamwork. Eager to contribute as a software
-                engineer, I'm excited about creating innovative solutions.
+                Hello! I'm a passionate full-stack web developer with hands-on
+                experience in building dynamic and responsive web applications.
+                I’ve completed my academic journey in Computing and Information
+                Systems at Sabaragamuwa University of Sri Lanka. Skilled in both
+                frontend and backend development, I’ve worked on multiple
+                projects using the MERN stack, Laravel, and various other
+                technologies. I'm particularly enthusiastic about Python and
+                exploring the world of Machine Learning. I enjoy turning ideas
+                into real-world solutions and continuously strive to grow as a
+                developer.
               </p>
               <div className="flex mt-10 items-center gap-7">
                 {info.map((content) => (
