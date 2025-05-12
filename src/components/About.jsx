@@ -3,8 +3,8 @@ import aboutImg from "../assets/images/show.png";
 
 const About = () => {
   const info = [
-    { text: "Years experience", count: "04" },
-    { text: "Completed Projects", count: "04" },
+    { text: "Years experience", count: "05" },
+    { text: "Completed Projects", count: "08" },
     { text: "Companies Work", count: "01" },
   ];
   return (

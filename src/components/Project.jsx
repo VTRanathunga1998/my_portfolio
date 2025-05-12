@@ -1,6 +1,7 @@
 import React from "react";
 import project2 from "../assets/images/project-1.png";
 import project1 from "../assets/images/project-2.png";
+import project3 from "../assets/images/project-3.png";
 import project_person from "../assets/images/show2.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -29,6 +30,12 @@ const Project = () => {
       name: "Automated Attendance System",
       github_link:
         "https://github.com/VTRanathunga1998/UniversityAttendanceSystem.git",
+      live_link: "#",
+    },
+    {
+      img: project3,
+      name: "Sports Club Control System",
+      github_link: "",
       live_link: "#",
     },
   ];
