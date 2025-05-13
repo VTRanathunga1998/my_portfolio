@@ -10,6 +10,16 @@ import { TypeAnimation } from "react-type-animation";
 const Hero = () => {
   const social_media = [
     {
+      platform: "LinkedIn",
+      icon: "logo-linkedin",
+      link: "https://www.linkedin.com/in/viraj-tharuka-83443b213",
+    },
+    {
+      platform: "GitHub",
+      icon: "logo-github",
+      link: "https://github.com/VTRanathunga1998",
+    },
+    {
       platform: "Instagram",
       icon: "logo-instagram",
       link: "https://www.instagram.com/vtranathunga?igsh=OGQ5ZDc2ODk2ZA==",
@@ -18,16 +28,6 @@ const Hero = () => {
       platform: "Facebook",
       icon: "logo-facebook",
       link: "https://www.facebook.com/viraj.tharuka.98?mibextid=kFxxJD",
-    },
-    {
-      platform: "LinkedIn",
-      icon: "logo-linkedin",
-      link: "https://www.linkedin.com/in/viraj-tharuka-83443b213",
-    },
-    {
-      platform: "GitHub",
-      icon: "logo-github",
-      link: "https://twitter.com/your_handle",
     },
   ];
 

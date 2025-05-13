@@ -2,6 +2,7 @@ import React from "react";
 import project2 from "../assets/images/project-1.png";
 import project1 from "../assets/images/project-2.png";
 import project3 from "../assets/images/project-3.png";
+import project4 from "../assets/images/project-4.png";
 import project_person from "../assets/images/show2.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -37,6 +38,12 @@ const Project = () => {
       name: "Sports Club Control System",
       github_link: "",
       live_link: "https://club.otomatiki.xyz/",
+    },
+    {
+      img: project4,
+      name: "Lost Property System",
+      github_link: "https://github.com/VTRanathunga1998/lost-property.git",
+      live_link: "",
     },
   ];
   return (
