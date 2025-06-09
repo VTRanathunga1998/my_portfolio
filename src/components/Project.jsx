@@ -51,7 +51,7 @@ const Project = () => {
       name: "Debt Tracking System",
       github_link:
         "https://github.com/VTRanathunga1998/debt-tracking-system.git",
-      live_link: "",
+      live_link: "https://www.youtube.com/watch?v=dHZ6qGSNaMI",
     },
   ];
   return (
