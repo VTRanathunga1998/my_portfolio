@@ -19,7 +19,6 @@ function App() {
       <Contact />
       <Footer />
       <Bot />
-
     </div>
   );
 }
